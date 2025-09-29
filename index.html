@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantol Auto Garage - Professional Car Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D20103',
+                        secondary: '#211B1B',
+                        dark: '#211B1B',
+                        light: '#E8E8E8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .technician-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">AC</div>
+                <h1 class="ml-3 text-2xl font-bold text-dark">Mantol Auto<span class="text-primary">Garage</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-dark hover:text-primary font-medium">Home</a>
+                <a href="#services" class="text-dark hover:text-primary font-medium">Services</a>
+                <a href="#booking" class="text-dark hover:text-primary font-medium">Book Now</a>
+                <a href="#technicians" class="text-dark hover:text-primary font-medium">Technicians</a>
+                <a href="#contact" class="text-dark hover:text-primary font-medium">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">Login</button>
+                <button class="md:hidden text-dark">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="#A01718">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Professional Auto Repair & Maintenance</h2>
+                <p class="text-xl mb-6">We provide top-quality car services with certified technicians and state-of-the-art equipment.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#booking" class="bg-secondary hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg text-center transition">Book Appointment</a>
+                    <a href="#services" class="bg-white hover:bg-gray-200 text-primary font-bold py-3 px-6 rounded-lg text-center transition">Our Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Car Service" class="rounded-lg shadow-xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Our Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-light rounded-xl p-6 service-card transition duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Oil Change</h3>
+                    <p class="text-gray-600 mb-4">Quick and efficient oil change service to keep your engine running smoothly.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-lg">From $49.99</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-light rounded-xl p-6 service-card transition duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mb-4">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Brake Service</h3>
+                    <p class="text-gray-600 mb-4">Complete brake inspection and repair for your safety on the road.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-lg">From $99.99</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-light rounded-xl p-6 service-card transition duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mb-4">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Engine Repair</h3>
+                    <p class="text-gray-600 mb-4">Expert diagnosis and repair for all engine issues, big or small.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-lg">From $199.99</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="bg-light rounded-xl p-6 service-card transition duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mb-4">
+                        <i class="fas fa-tire"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Tire Service</h3>
+                    <p class="text-gray-600 mb-4">Tire rotation, replacement, and balancing for optimal performance.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-lg">From $29.99</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="bg-light rounded-xl p-6 service-card transition duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mb-4">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">AC Service</h3>
+                    <p class="text-gray-600 mb-4">Keep your cool with our professional air conditioning services.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-lg">From $79.99</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition">Book Now</button>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="bg-light rounded-xl p-6 service-card transition duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl mb-4">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Vehicle Inspection</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive vehicle inspection to ensure everything is in working order.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-lg">From $39.99</span>
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Book Your Appointment</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto">
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold text-dark mb-4">Personal Information</h3>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-2">Full Name</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-2">Phone Number</label>
+                        <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-2">Email Address</label>
+                        <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-2">Preferred Date</label>
+                        <input type="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-bold text-dark mb-4 mt-6">Vehicle Information</h3>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-2">Make</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-2">Model</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-2">Year</label>
+                        <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-dark mb-2">Service Type</label>
+                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option>Oil Change</option>
+                            <option>Brake Service</option>
+                            <option>Engine Repair</option>
+                            <option>Tire Service</option>
+                            <option>AC Service</option>
+                            <option>Vehicle Inspection</option>
+                        </select>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-dark mb-2">Additional Notes</label>
+                        <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2 flex justify-center mt-6">
+                        <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition">Schedule Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technicians Section -->
+    <section id="technicians" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Our Certified Technicians</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Technician 1 -->
+                <div class="bg-light rounded-xl overflow-hidden technician-card">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Technician" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark">Mike Johnson</h3>
+                        <p class="text-primary font-medium mb-2">Master Technician</p>
+                        <p class="text-gray-600">15+ years of experience specializing in engine diagnostics and repair.</p>
+                        <div class="flex mt-4 space-x-2">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Engines</span>
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Diagnostics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technician 2 -->
+                <div class="bg-light rounded-xl overflow-hidden technician-card">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Technician" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark">Sarah Williams</h3>
+                        <p class="text-primary font-medium mb-2">Brake Specialist</p>
+                        <p class="text-gray-600">10+ years of experience with brake systems and suspension.</p>
+                        <div class="flex mt-4 space-x-2">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Brakes</span>
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Suspension</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technician 3 -->
+                <div class="bg-light rounded-xl overflow-hidden technician-card">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565898835704-3d6be4a2c98c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Technician" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark">David Chen</h3>
+                        <p class="text-primary font-medium mb-2">Electrical Systems Expert</p>
+                        <p class="text-gray-600">Specializes in electrical systems, diagnostics, and computer systems.</p>
+                        <div class="flex mt-4 space-x-2">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Electrical</span>
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Computers</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technician 4 -->
+                <div class="bg-light rounded-xl overflow-hidden technician-card">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1612450632008-22c787a59a4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Technician" class="w-full h-full object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark">Emily Rodriguez</h3>
+                        <p class="text-primary font-medium mb-2">Transmission Specialist</p>
+                        <p class="text-gray-600">Expert in transmission repair and maintenance with 12 years of experience.</p>
+                        <div class="flex mt-4 space-x-2">
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Transmission</span>
+                            <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm">Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">What Our Customers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-secondary text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The team at AutoCare Garage is fantastic! They fixed my car's issue quickly and at a reasonable price. Will definitely return for all my car needs."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">JD</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-dark">John Doe</h4>
+                            <p class="text-gray-500">Toyota Camry Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-secondary text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"I've been coming to AutoCare for years. Their technicians are knowledgeable, and they always explain everything clearly. Honest and reliable service!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">MR</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-dark">Maria Rodriguez</h4>
+                            <p class="text-gray-500">Honda Civic Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-secondary text-2xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"They saved me hundreds of dollars compared to the dealership. Quick turnaround time and friendly staff. Highly recommend their brake services!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">TS</div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-dark">Thomas Smith</h4>
+                            <p class="text-gray-500">Ford F-150 Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Contact Us</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-light rounded-xl p-8 h-full">
+                        <h3 class="text-xl font-bold text-dark mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">Address</h4>
+                                    <p class="text-gray-600">Ngong Road 220200</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">Phone</h4>
+                                    <p class="text-gray-600">+254703758891</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">Email</h4>
+                                    <p class="text-gray-600">info@mantolautogarage.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark mb-1">Hours</h4>
+                                    <p class="text-gray-600">Mon-Fri: 8:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-600">Sat: 9:00 AM - 4:00 PM</p>
+                                    <p class="text-gray-600">Sun: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-light rounded-xl p-8 h-full">
+                        <h3 class="text-xl font-bold text-dark mb-6">Send Us a Message</h3>
+                        
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-dark mb-2">Your Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-2">Email Address</label>
+                                <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-2">Subject</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark mb-2">Message</label>
+                                <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" rows="5"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Mantol Auto Garage</h3>
+                    <p class="text-gray-400">Providing top-quality auto repair and maintenance services since 2005.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#booking" class="text-gray-400 hover:text-white transition">Book Appointment</a></li>
+                        <li><a href="#technicians" class="text-gray-400 hover:text-white transition">Technicians</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Oil Change</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Brake Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Engine Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tire Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">AC Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter</p>
+                    <div class="flex mt-2">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full text-dark">
+                        <button class="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-r-lg">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Mantol Auto Garage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Simple form validation
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your submission! This is a demo website, so your information has not been actually sent.');
+            });
+        });
+    </script>
+</body>
+</html>
